@@ -1,0 +1,9 @@
+export const ADMIN_ROUTE = "/admin";
+export const LOGIN_ROUTE = "/login";
+export const REGISTRATION_ROUTE = "/registration";
+export const PROFILE_ROUTE = "/profile";
+export const CHATS_ROUTE = "/chats";
+export const FOLLOWERS_ROUTE = "/followers";
+export const NOTIFICATIONS_ROUTE = "/notifications";
+export const FEED_ROUTE = "/";
+export const SEARCH_ROUTE = "/search";
