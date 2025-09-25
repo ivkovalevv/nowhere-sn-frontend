@@ -2,34 +2,49 @@
   @return $px / $base-font-size * 1rem;
 }
 
-$bg-color: #080b10;
-$main-text-color: #b8b8b8;
-$primary-color: #8a4cd5;
+$dark-bg: #080b10;
+$dark-text: #b8b8b8;
+$dark-primary: #8a4cd5;
+$dark-header: rgba(46, 38, 68, 0.36);
+
+$light-bg: #fafbff;
+$light-text: #0c1024;
+$light-primary: #8132e0;
+$light-header:rgb(255, 255, 255, 0.36);
+
+:root {
+  --bg-color: #{$dark-bg};
+  --text-color: #{$dark-text};
+  --primary-color: #{$dark-primary};
+  --background-header: #{$dark-header};
+}
+
+body.light-theme {
+  --bg-color: #{$light-bg};
+  --text-color: #{$light-text};
+  --primary-color: #{$light-primary};
+  --background-header: #{$light-header};
+}
+
+body.dark-theme {
+  --bg-color: #{$dark-bg};
+  --text-color: #{$dark-text};
+  --primary-color: #{$dark-primary};
+  --background-header: #{$dark-header};
+}
 
 body {
   width: 100%;
   height: 100vh;
   margin: 0;
   transition: all 0.3s ease;
-  background-color: $bg-color;
-
-  &.light-theme {
-    $bg-color: #fafbff !global;
-    $main-text-color: #0c1024 !global;
-    $primary-color: #8132e0 !global;
-  }
-
-  &.dark-theme {
-    $bg-color: #080b10 !global;
-    $main-text-color: #fafbff !global;
-    $primary-color: #8a4cd5 !global;
-  }
+  background-color: var(--bg-color);
 }
 
 * {
   box-sizing: border-box;
   font-size: px-to-rem(20px);
-  color: $main-text-color;
+  color: var(--text-color);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -75,7 +90,7 @@ li {
   z-index: 0;
   background: radial-gradient(
     125% 125% at 50% 95%,
-    $bg-color 55%,
-    $primary-color 130%
+    var(--bg-color) 55%,
+    var(--primary-color) 130%
   );
 }

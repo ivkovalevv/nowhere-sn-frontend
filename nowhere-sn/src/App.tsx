@@ -23,7 +23,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header theme={lightTheme} />
       <div className="App">Hello, Nowhere sn!</div>
     </BrowserRouter>
   );

@@ -1,3 +1,5 @@
+@use "../../index.scss" as v;
+
 @function px-to-rem($px, $base-font-size: 16px) {
     @return $px / $base-font-size * 1rem;
   }
@@ -13,4 +15,5 @@
 
 .logo__title{
     font-size: px-to-rem(16px);
+    color: var(--main-text-color);
 }
