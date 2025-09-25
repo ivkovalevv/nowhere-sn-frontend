@@ -8,7 +8,6 @@ const Logo = () => {
       <EnsoSVG />
       <div className="logo__wrapper">
         <h3 className="logo__title">Nowhere</h3>
-        <h3 className="logo__description">social network for being here now</h3>
       </div>
     </div>
   );
