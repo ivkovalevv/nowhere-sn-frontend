@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 
 function App() {
   const [lightTheme, setLightTheme] = useState(() => {
-    const savedTheme = localStorage.getItem("darkTheme");
+    const savedTheme = localStorage.getItem("lightTheme");
     return savedTheme ? JSON.parse(savedTheme) : false;
   });
 
@@ -18,7 +18,7 @@ function App() {
       document.body.classList.remove("light-theme");
     }
 
-    localStorage.setItem("darkTheme", JSON.stringify(lightTheme));
+    localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
   }, [lightTheme]);
 
   return (
